@@ -4,7 +4,7 @@
   "description": "Systema Creso library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.test.js"
+    "test": "mocha --recursive 'test/**/*.test.js'"
   },
   "author": "Claudio Procida <claudio.procida@gmail.com>",
   "license": "ISC",
