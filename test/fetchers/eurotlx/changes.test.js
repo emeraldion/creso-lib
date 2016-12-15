@@ -12,7 +12,7 @@ describe('eurotlx changes fetcher', function() {
       expect(values).to.be.defined;
 
       _.forEach(currencies, function(currency) {
-      	expect(values[currency]).to.be.defined;
+        expect(values[currency]).to.be.defined;
       });
       done();
     });
