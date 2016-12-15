@@ -1,0 +1,24 @@
+{
+  "name": "creso-lib",
+  "version": "1.0.0",
+  "description": "Systema Creso library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "author": "Claudio Procida <claudio.procida@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emeraldion/creso-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emeraldion/creso-lib/issues"
+  },
+  "homepage": "https://github.com/emeraldion/creso-lib#readme",
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "mysql": "^2.12.0",
+    "request": "^2.79.0"
+  }
+}
