@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/emeraldion/creso-lib.svg?branch=master)](https://travis-ci.org/emeraldion/creso-lib)
+
 # creso-lib
 
 Systema Creso library
