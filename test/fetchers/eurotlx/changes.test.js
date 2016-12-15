@@ -5,7 +5,7 @@ const _ = require('lodash'),
   currencies = require('../../../lib/constants/currencies'),
   expect = require('chai').expect;
 
-describe('changes eurotlx fetcher', function() {
+describe('eurotlx changes fetcher', function() {
   it('fetches changes', function(done) {
     changes(function(err, values) {
       expect(err).to.be.null;
