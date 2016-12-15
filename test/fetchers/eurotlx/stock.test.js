@@ -10,7 +10,7 @@ describe('eurotlx stock fetcher', function() {
       expect(err).to.be.null;
       expect(stock).to.be.defined;
       
-      expect(stock.isin).to.be.defined;
+      expect(stock.isin).to.equal('XS1115184753');
       expect(stock.name).to.be.defined;
       expect(stock.market).to.be.defined;
       expect(stock.currency).to.be.defined;

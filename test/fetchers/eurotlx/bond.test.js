@@ -10,7 +10,7 @@ describe('eurotlx bond fetcher', function() {
       expect(err).to.be.null;
       expect(bond).to.be.defined;
 
-      expect(bond.isin).to.be.defined;
+      expect(bond.isin).to.equal('XS1115184753');
       expect(bond.expiration).to.be.defined;
       expect(bond.cadence).to.be.defined;
       expect(bond.rate).to.be.defined;
