@@ -15,6 +15,7 @@ describe('eurotlx quote fetcher', function() {
   it('handles a fake isin', function(done) {
     quoteFetcher('XS0000000000', function(err, value) {
       expect(err).to.be.defined;
+      expect(err.code).to.equal('ENOTFOUND');
       expect(value).to.be.null;
       done();
     });

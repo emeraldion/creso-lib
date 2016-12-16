@@ -1,10 +1,10 @@
 'use strict';
 
 const _ = require('lodash'),
-  bondFetcher = require('../../../lib/fetchers/eurotlx/bond'),
+  bondFetcher = require('../../../lib/fetchers/ariva/bond'),
   expect = require('chai').expect;
 
-describe('eurotlx bond fetcher', function() {
+describe('ariva bond fetcher', function() {
   it('fetches a bond by isin', function(done) {
     bondFetcher('XS1115184753', function(err, bond) {
       expect(err).to.be.null;
@@ -19,11 +19,15 @@ describe('eurotlx bond fetcher', function() {
     });
   });
 
-  it('handles an unlisted bond', function(done) {
-  	bondFetcher('NZGOVDT427C1', function(err, bond) {
-      expect(err).to.be.defined;
-      expect(err.code).to.equal('ENOTFOUND');
-      expect(bond).to.be.null;
+  it('fetches a bond by isin - six months cadence', function(done) {
+    bondFetcher('NZGOVDT427C1', function(err, bond) {
+      expect(err).to.be.null;
+      expect(bond).to.be.defined;
+
+      expect(bond.isin).to.equal('NZGOVDT427C1');
+      expect(bond.expiration).to.equal('2027-04-05');
+      expect(bond.cadence).to.equal(6);
+      expect(bond.rate).to.equal('4.5');
 
       done();
     });
