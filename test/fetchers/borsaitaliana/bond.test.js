@@ -1,19 +1,19 @@
 'use strict';
 
 const _ = require('lodash'),
-  bondFetcher = require('../../../lib/fetchers/eurotlx/bond'),
+  bondFetcher = require('../../../lib/fetchers/borsaitaliana/bond'),
   expect = require('chai').expect;
 
-describe('eurotlx bond fetcher', function() {
+describe('borsaitaliana bond fetcher', function() {
   it('fetches a bond by isin', function(done) {
-    bondFetcher('XS1115184753', function(err, bond) {
+    bondFetcher('AT0000A19XC3', function(err, bond) {
       expect(err).to.be.null;
       expect(bond).to.be.defined;
 
-      expect(bond.isin).to.equal('XS1115184753');
-      expect(bond.expiration).to.equal('2024-10-03');
-      expect(bond.cadence).to.equal(12);
-      expect(bond.rate).to.equal('9.25');
+      expect(bond.isin).to.equal('AT0000A19XC3');
+      expect(bond.expiration).to.equal('2019-10-18');
+      // expect(bond.cadence).to.equal(12);
+      expect(bond.rate).to.equal('0.25');
 
       done();
     });
