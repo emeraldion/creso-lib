@@ -423,5 +423,3 @@ ALTER TABLE `creso_watchlist`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 
 --
-
-GRANT ALL ON `creso`.* TO 'creso'@'%'
