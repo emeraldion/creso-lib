@@ -4,4 +4,11 @@ node_js:
   - '6.9'
   - '5.12'
   - '4.7'
-script: npm run test
+services:
+  - mysql
+env:
+  - MYSQL_HOST=127.0.0.1 MYSQL_PORT= MYSQL_USER=root MYSQL_PASSWORD= MYSQL_DB=creso_test
+before_script:
+  - mysql < schemas/creso_test.sql
+
+script: npm run test-ci

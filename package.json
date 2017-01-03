@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "mysql": "mysql -u root -p < schemas/creso_test.sql",
-    "test": "MYSQL_HOST=localhost MYSQL_USER=root MYSQL_PASSWORD=root MYSQL_DB=creso_test MYSQL_PORT=8889 mocha --recursive 'test/**/*.test.js'"
+    "test": "MYSQL_HOST=localhost MYSQL_USER=root MYSQL_PASSWORD=root MYSQL_DB=creso_test MYSQL_PORT=8889 mocha --recursive 'test/**/*.test.js'",
+    "test-ci": "mocha --recursive 'test/**/*.test.js'"
   },
   "author": "Claudio Procida <claudio.procida@gmail.com>",
   "license": "ISC",
