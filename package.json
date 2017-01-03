@@ -4,7 +4,8 @@
   "description": "Systema Creso library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive 'test/**/*.test.js'"
+    "mysql": "mysql -u root -p < schemas/creso_test.sql",
+    "test": "MYSQL_HOST=localhost MYSQL_USER=root MYSQL_PASSWORD=root MYSQL_DB=creso_test MYSQL_PORT=8889 mocha --recursive 'test/**/*.test.js'"
   },
   "author": "Claudio Procida <claudio.procida@gmail.com>",
   "license": "ISC",
@@ -18,9 +19,9 @@
   "homepage": "https://github.com/emeraldion/creso-lib#readme",
   "dependencies": {
     "adelia": "^1.0.2",
+    "bluebird": "^3.4.6",
     "keymirror": "^0.1.1",
     "lodash": "^4.17.2",
-    "mysql": "^2.12.0",
     "request": "^2.79.0"
   },
   "devDependencies": {
